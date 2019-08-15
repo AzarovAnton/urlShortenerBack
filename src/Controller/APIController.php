@@ -136,7 +136,6 @@ class APIController extends FOSRestController
     $response = array();
     $response['status'] = 'ok';
     $response['errors'] = array();
-        // dump($this->getDoctrine()->getRepository(User::class)->findAll());
     if($data):
       if(isset($data->email)):
         if(filter_var($data->email, FILTER_VALIDATE_EMAIL)):

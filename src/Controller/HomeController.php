@@ -14,9 +14,6 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-
-        dump($this->getDoctrine()->getRepository(User::class)->findAll());
-        dump($this->getDoctrine()->getRepository(Urls::class)->findLastUrls(10));
         return $this->render('home/index.html.twig');
     }
 }

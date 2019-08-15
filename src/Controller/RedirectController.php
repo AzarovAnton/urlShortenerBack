@@ -19,7 +19,6 @@ class RedirectController extends AbstractController
     public function index($url, Request $request)
     {
         $result = $this->getDoctrine()->getRepository(Urls::class)->findByShortUrl($url);
-        var_dump($result);
         if($result){
             $entityManager = $this->getDoctrine()->getManager();
 
