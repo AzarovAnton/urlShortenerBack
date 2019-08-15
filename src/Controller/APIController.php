@@ -269,10 +269,7 @@ class APIController extends FOSRestController
         $response['status'] = 'error';
       endif;
     else:
-      $response['status'] = 'ok';
-      $response['user']['username'] = '';
-      $response['user']['email'] = '';
-      $response['user']['id'] = '';
+      $response['status'] = 'error';
     endif;
     $resultJSON = $this->serializer->serialize($response, 'json');
         
